@@ -1393,6 +1393,16 @@ ul {
     display: flex;
   }
 
+  /* Scale logo down slightly on mobile */
+  .nav-logo {
+    height: 38px;
+    width: 84px;
+  }
+
+  .nav-logo img {
+    height: 38px;
+  }
+
   .nav-links {
     position: fixed;
     top: 0;
@@ -1438,27 +1448,31 @@ ul {
 
   /* Hero mobile */
   .hero {
-    min-height: 100vh;
+    min-height: 100svh; /* use small viewport height for mobile browsers */
   }
 
   .hero-content {
-    padding-top: 120px;
-    padding-bottom: 80px;
+    padding-top: 100px;
+    padding-bottom: 60px;
     flex-direction: column;
     align-items: flex-start;
+    gap: 28px;
   }
 
   .hero h1 {
     font-size: clamp(2.4rem, 8vw, 3.2rem);
+    margin-bottom: 16px;
   }
 
   .hero-desc {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
+    margin-bottom: 28px;
   }
 
   .hero-cta {
     flex-direction: column;
     width: 100%;
+    gap: 12px;
   }
 
   .hero-cta .btn {
@@ -1476,31 +1490,66 @@ ul {
   .hero-card {
     min-width: unset;
     flex: 1;
-    padding: 16px 20px;
+    padding: 14px 16px;
   }
 
   .hero-card-number {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .hero-card-label {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
   }
 
   .hero-scroll {
     display: none;
   }
 
-  /* Sections mobile */
+  /* Section spacing mobile */
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-header h2 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
   .about-section,
   .services-section,
   .testimonials-section {
-    padding: 80px 0;
+    padding: 64px 0;
+  }
+
+  .about-grid {
+    gap: 32px;
+  }
+
+  .about-image img {
+    height: auto;
+    max-height: 300px;
+  }
+
+  .about-text h2 {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
   }
 
   .services-grid,
   .testimonials-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-content {
+    padding: 22px 24px 26px;
+  }
+
+  .service-image {
+    height: 190px;
   }
 
   .stats-grid {
@@ -1512,24 +1561,91 @@ ul {
     font-size: 2rem;
   }
 
+  /* CTA mobile */
+  .cta-section {
+    padding: 64px 0;
+  }
+
+  .cta-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .cta-content p {
+    font-size: 0.92rem;
+    margin-bottom: 28px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
   /* Contact mobile */
   .contact-hero {
-    padding: 130px 0 50px;
+    padding: 120px 0 40px;
+  }
+
+  .contact-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .contact-hero p {
+    font-size: 0.9rem;
+  }
+
+  .contact-section {
+    padding: 64px 0;
   }
 
   .contact-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
+  }
+
+  .contact-form-wrapper h2 {
+    font-size: 1.4rem;
+    margin-bottom: 24px;
   }
 
   .form-row {
     grid-template-columns: 1fr;
   }
 
+  .contact-phone {
+    font-size: 1.3rem;
+  }
+
+  .contact-phone.secondary {
+    font-size: 1rem;
+  }
+
   /* Footer mobile */
+  .footer {
+    padding-top: 48px;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 28px;
+  }
+
+  .footer-col:first-child {
+    margin-bottom: 8px;
+  }
+
+  .footer-col h4 {
+    margin-bottom: 14px;
+  }
+
+  .footer-bottom {
+    margin-top: 36px;
   }
 
   .footer-bottom-inner {
@@ -1538,6 +1654,13 @@ ul {
     text-align: center;
   }
 
+  /* Scroll-to-top tighter on mobile */
+  .scroll-top {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 /* ---- Small mobile ---- */
@@ -1549,17 +1672,30 @@ ul {
   .about-section,
   .services-section,
   .testimonials-section {
-    padding: 64px 0;
+    padding: 48px 0;
+  }
+
+  .hero-content {
+    padding-top: 90px;
+    padding-bottom: 48px;
+    gap: 24px;
   }
 
   .hero h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .hero-desc {
+    font-size: 0.88rem;
+    margin-bottom: 24px;
   }
 
   .hero-label {
     font-size: 10px;
     letter-spacing: 3px;
     padding-left: 32px;
+    margin-bottom: 16px;
   }
 
   .hero-label::before {
@@ -1568,11 +1704,17 @@ ul {
 
   .hero-cards {
     flex-direction: column;
+    gap: 8px;
   }
 
   .hero-card {
     flex: none;
     width: 100%;
+    padding: 12px 16px;
+  }
+
+  .hero-card-number {
+    font-size: 1.2rem;
   }
 
   .stats-grid {
@@ -1581,14 +1723,50 @@ ul {
   }
 
   .section-header {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
 
   .testimonial-card {
-    padding: 28px;
+    padding: 24px;
+  }
+
+  .testimonial-text {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+  }
+
+  .cta-section {
+    padding: 48px 0;
+  }
+
+  .contact-hero {
+    padding: 110px 0 32px;
+  }
+
+  .contact-section {
+    padding: 48px 0;
   }
 
   .contact-info-card {
-    padding: 32px 24px;
+    padding: 28px 20px;
+  }
+
+  .contact-details-card {
+    padding: 28px 20px;
+  }
+
+  /* Footer small mobile */
+  .footer {
+    padding-top: 40px;
+  }
+
+  .footer-bottom {
+    margin-top: 28px;
+    padding: 20px 0;
+  }
+
+  .footer-col p,
+  .footer-col ul li {
+    font-size: 0.84rem;
   }
 }
