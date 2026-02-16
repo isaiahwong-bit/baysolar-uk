@@ -1,0 +1,8 @@
+.DS_Store
+.claude/
+Logo/
+images/Share images from Liam*/
+*.swp
+*.swo
+*~
+.env
