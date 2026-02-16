@@ -26,7 +26,7 @@ get_header();
           <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>" class="btn btn-primary btn-lg"><?php esc_html_e( 'Get a Free Quote', 'baysolar' ); ?></a>
           <a href="tel:07920864473" class="btn btn-glass btn-lg">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-            07920 864473
+            <?php esc_html_e( 'Call Mark', 'baysolar' ); ?>
           </a>
         </div>
       </div>
@@ -101,13 +101,13 @@ get_header();
         </div>
         <div class="service-card">
           <div class="service-image">
-            <img src="<?php echo baysolar_image( 'enterprise-new.jpg' ); ?>" alt="<?php esc_attr_e( 'Enterprise Solar Installation', 'baysolar' ); ?>" loading="lazy">
+            <img src="<?php echo baysolar_image( 'enterprise-new.jpg' ); ?>" alt="<?php esc_attr_e( 'Solar Panel Evaluation & Safety Checks', 'baysolar' ); ?>" loading="lazy">
           </div>
           <div class="service-content">
-            <span class="service-tag"><?php esc_html_e( 'Large Scale', 'baysolar' ); ?></span>
-            <h3><?php esc_html_e( 'Enterprise', 'baysolar' ); ?></h3>
-            <p><?php esc_html_e( 'Large-scale installations for hotels, schools and care homes. We handle complex projects with precision and expertise.', 'baysolar' ); ?></p>
-            <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>" class="service-link"><?php esc_html_e( 'Get a Quote', 'baysolar' ); ?> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <span class="service-tag"><?php esc_html_e( 'Maintenance', 'baysolar' ); ?></span>
+            <h3><?php esc_html_e( 'Solar Evaluation & Safety', 'baysolar' ); ?></h3>
+            <p><?php esc_html_e( 'We evaluate and update older solar systems to ensure they\'re running at peak efficiency. Our comprehensive safety checks and system assessments keep your installation compliant and performing optimally.', 'baysolar' ); ?></p>
+            <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>" class="service-link"><?php esc_html_e( 'Book an Inspection', 'baysolar' ); ?> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
           </div>
         </div>
       </div>
@@ -174,7 +174,8 @@ get_header();
       <h2><?php echo wp_kses_post( __( 'Ready to Switch<br>to <em>Solar</em>?', 'baysolar' ) ); ?></h2>
       <p><?php esc_html_e( 'Get in touch today for a free consultation and quote. Start saving on your energy bills.', 'baysolar' ); ?></p>
       <div class="cta-buttons">
-        <a href="tel:07920864473" class="btn btn-white btn-lg"><?php esc_html_e( 'Call Us Now', 'baysolar' ); ?></a>
+        <a href="tel:07920864473" class="btn btn-white btn-lg"><?php esc_html_e( 'Call Mark', 'baysolar' ); ?></a>
+        <a href="tel:07727804063" class="btn btn-white btn-lg"><?php esc_html_e( 'Call Liam', 'baysolar' ); ?></a>
         <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>" class="btn btn-outline-white btn-lg"><?php esc_html_e( 'Get a Quote', 'baysolar' ); ?></a>
       </div>
     </div>

@@ -54,8 +54,8 @@ get_header();
       <div class="contact-info-wrapper">
         <div class="contact-info-card">
           <h3><?php echo wp_kses_post( __( "We're here to help!<br>Call Us Today!", 'baysolar' ) ); ?></h3>
-          <a href="tel:07920864473" class="contact-phone">07920 864473</a>
-          <a href="tel:07727804063" class="contact-phone secondary">07727 804063</a>
+          <a href="tel:07920864473" class="contact-phone"><?php esc_html_e( 'Call Mark - 07920 864473', 'baysolar' ); ?></a>
+          <a href="tel:07727804063" class="contact-phone secondary"><?php esc_html_e( 'Call Liam - 07727 804063', 'baysolar' ); ?></a>
         </div>
 
         <div class="contact-details-card">

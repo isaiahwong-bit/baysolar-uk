@@ -22,8 +22,8 @@
       <div class="footer-col">
         <h4><?php esc_html_e( 'Contact Info', 'baysolar' ); ?></h4>
         <ul>
-          <li><a href="tel:07920864473">07920 864473</a></li>
-          <li><a href="tel:07727804063">07727 804063</a></li>
+          <li><a href="tel:07920864473"><?php esc_html_e( 'Call Mark - 07920 864473', 'baysolar' ); ?></a></li>
+          <li><a href="tel:07727804063"><?php esc_html_e( 'Call Liam - 07727 804063', 'baysolar' ); ?></a></li>
           <li>Woodgate, White Lund Industrial Estate, Morecambe, Lancashire, LA3 3PS</li>
         </ul>
       </div>
