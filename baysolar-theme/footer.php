@@ -11,12 +11,10 @@
         <h4><?php esc_html_e( 'Quick Links', 'baysolar' ); ?></h4>
         <ul>
           <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'baysolar' ); ?></a></li>
-          <?php if ( is_front_page() ) : ?>
-          <li><a href="#about"><?php esc_html_e( 'About', 'baysolar' ); ?></a></li>
-          <li><a href="#services"><?php esc_html_e( 'Services', 'baysolar' ); ?></a></li>
-          <?php endif; ?>
+          <li><a href="<?php echo esc_url( home_url( '/#about' ) ); ?>"><?php esc_html_e( 'About', 'baysolar' ); ?></a></li>
+          <li><a href="<?php echo esc_url( home_url( '/#services' ) ); ?>"><?php esc_html_e( 'Services', 'baysolar' ); ?></a></li>
+          <li><a href="<?php echo esc_url( get_permalink( get_page_by_path( 'gallery' ) ) ); ?>"><?php esc_html_e( 'Gallery', 'baysolar' ); ?></a></li>
           <li><a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>"><?php esc_html_e( 'Contact', 'baysolar' ); ?></a></li>
-          <li><a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>"><?php esc_html_e( 'Get a Quote', 'baysolar' ); ?></a></li>
         </ul>
       </div>
       <div class="footer-col">

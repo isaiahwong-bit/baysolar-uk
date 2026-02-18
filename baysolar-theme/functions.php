@@ -132,6 +132,54 @@ function baysolar_schema_markup() {
 add_action( 'wp_head', 'baysolar_schema_markup' );
 
 /**
+ * Register Gallery custom post type
+ */
+function baysolar_register_gallery() {
+    register_post_type( 'gallery', array(
+        'labels' => array(
+            'name'               => __( 'Gallery', 'baysolar' ),
+            'singular_name'      => __( 'Gallery Photo', 'baysolar' ),
+            'add_new'            => __( 'Add New Photo', 'baysolar' ),
+            'add_new_item'       => __( 'Add New Gallery Photo', 'baysolar' ),
+            'edit_item'          => __( 'Edit Gallery Photo', 'baysolar' ),
+            'new_item'           => __( 'New Gallery Photo', 'baysolar' ),
+            'view_item'          => __( 'View Gallery Photo', 'baysolar' ),
+            'search_items'       => __( 'Search Gallery', 'baysolar' ),
+            'not_found'          => __( 'No photos found', 'baysolar' ),
+            'not_found_in_trash' => __( 'No photos found in Trash', 'baysolar' ),
+            'menu_name'          => __( 'Gallery', 'baysolar' ),
+        ),
+        'public'        => true,
+        'has_archive'   => false,
+        'menu_icon'     => 'dashicons-format-gallery',
+        'menu_position' => 5,
+        'supports'      => array( 'title', 'thumbnail' ),
+        'show_in_rest'  => true,
+    ) );
+
+    register_taxonomy( 'gallery_category', 'gallery', array(
+        'labels' => array(
+            'name'          => __( 'Categories', 'baysolar' ),
+            'singular_name' => __( 'Category', 'baysolar' ),
+            'add_new_item'  => __( 'Add New Category', 'baysolar' ),
+            'search_items'  => __( 'Search Categories', 'baysolar' ),
+        ),
+        'hierarchical'  => true,
+        'show_in_rest'  => true,
+        'show_admin_column' => true,
+    ) );
+}
+add_action( 'init', 'baysolar_register_gallery' );
+
+/**
+ * Set custom image sizes for gallery
+ */
+function baysolar_image_sizes() {
+    add_image_size( 'gallery-thumb', 800, 600, true );
+}
+add_action( 'after_setup_theme', 'baysolar_image_sizes' );
+
+/**
  * Custom image helper
  */
 function baysolar_image( $filename ) {
@@ -147,6 +195,9 @@ function baysolar_body_classes( $classes ) {
     }
     if ( is_page( 'contact' ) ) {
         $classes[] = 'contact-page';
+    }
+    if ( is_page( 'gallery' ) ) {
+        $classes[] = 'gallery-page';
     }
     return $classes;
 }

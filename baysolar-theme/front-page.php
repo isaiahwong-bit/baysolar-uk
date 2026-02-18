@@ -21,7 +21,15 @@ get_header();
           <span class="hero-line"><?php esc_html_e( 'Powering', 'baysolar' ); ?></span>
           <span class="hero-line"><?php esc_html_e( 'Your', 'baysolar' ); ?> <em><?php esc_html_e( 'Future', 'baysolar' ); ?></em></span>
         </h1>
-        <p class="hero-desc"><?php esc_html_e( 'Professional solar installations across Lancaster, Morecambe and the surrounding areas. MCS certified with over 20 years of experience.', 'baysolar' ); ?></p>
+        <p class="hero-desc"><?php esc_html_e( 'Professional solar installations across Lancaster, Morecambe and the surrounding areas. Fully certified with over 20 years of experience.', 'baysolar' ); ?></p>
+        <div class="hero-trust">
+          <span class="hero-trust-label"><?php esc_html_e( 'Certified & Trusted', 'baysolar' ); ?></span>
+          <div class="hero-trust-logos">
+            <img src="<?php echo baysolar_image( 'mcs-certified.jpg' ); ?>" alt="<?php esc_attr_e( 'MCS Certified', 'baysolar' ); ?>">
+            <img src="<?php echo baysolar_image( 'recc-approved.jpg' ); ?>" alt="<?php esc_attr_e( 'RECC Approved', 'baysolar' ); ?>">
+            <img src="<?php echo baysolar_image( 'yesss-electrical.jpg' ); ?>" alt="<?php esc_attr_e( 'YESSS Electrical Partner', 'baysolar' ); ?>">
+          </div>
+        </div>
         <div class="hero-cta">
           <a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>" class="btn btn-primary btn-lg"><?php esc_html_e( 'Get a Free Quote', 'baysolar' ); ?></a>
           <a href="tel:07920864473" class="btn btn-glass btn-lg">
@@ -41,7 +49,7 @@ get_header();
           <span class="hero-card-label"><?php esc_html_e( 'Installations', 'baysolar' ); ?></span>
         </div>
         <div class="hero-card accent">
-          <span class="hero-card-number">MCS</span>
+          <span class="hero-card-number">100%</span>
           <span class="hero-card-label"><?php esc_html_e( 'Certified', 'baysolar' ); ?></span>
         </div>
       </div>
@@ -164,6 +172,40 @@ get_header();
           </div>
         </div>
         <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates & Accreditation Section -->
+  <section class="accreditation-section" id="accreditations">
+    <div class="container">
+      <div class="section-header">
+        <h4 class="section-subtitle"><?php esc_html_e( 'Trusted & Certified', 'baysolar' ); ?></h4>
+        <h2><?php esc_html_e( 'Certificates & Accreditation', 'baysolar' ); ?></h2>
+        <p class="section-desc"><?php esc_html_e( "We're proud to be fully certified and partnered with industry-leading organisations, ensuring the highest standards for every installation.", 'baysolar' ); ?></p>
+      </div>
+      <div class="accreditation-grid">
+        <div class="accreditation-card">
+          <div class="accreditation-logo">
+            <img src="<?php echo baysolar_image( 'mcs-certified.jpg' ); ?>" alt="<?php esc_attr_e( 'MCS Certified', 'baysolar' ); ?>" loading="lazy">
+          </div>
+          <h3><?php esc_html_e( 'MCS Certified', 'baysolar' ); ?></h3>
+          <p><?php esc_html_e( 'Microgeneration Certification Scheme — the mark of quality for renewable energy installations in the UK.', 'baysolar' ); ?></p>
+        </div>
+        <div class="accreditation-card">
+          <div class="accreditation-logo">
+            <img src="<?php echo baysolar_image( 'recc-approved.jpg' ); ?>" alt="<?php esc_attr_e( 'RECC Approved', 'baysolar' ); ?>" loading="lazy">
+          </div>
+          <h3><?php esc_html_e( 'RECC Approved', 'baysolar' ); ?></h3>
+          <p><?php esc_html_e( 'Renewable Energy Consumer Code member — protecting consumers and ensuring the highest standards of practice.', 'baysolar' ); ?></p>
+        </div>
+        <div class="accreditation-card">
+          <div class="accreditation-logo">
+            <img src="<?php echo baysolar_image( 'yesss-electrical.jpg' ); ?>" alt="<?php esc_attr_e( 'YESSS Electrical Partner', 'baysolar' ); ?>" loading="lazy">
+          </div>
+          <h3><?php esc_html_e( 'YESSS Electrical', 'baysolar' ); ?></h3>
+          <p><?php esc_html_e( 'Official partner — sourcing premium electrical components and equipment for every installation.', 'baysolar' ); ?></p>
+        </div>
       </div>
     </div>
   </section>

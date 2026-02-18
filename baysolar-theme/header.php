@@ -14,7 +14,7 @@
 
   <!-- Header -->
   <header class="header" id="header">
-    <?php if ( is_page( 'contact' ) ) : ?>
+    <?php if ( ! is_front_page() ) : ?>
     <div class="header-top">
       <div class="container header-top-inner">
         <div class="header-contact-info">
@@ -35,10 +35,13 @@
         </button>
         <ul class="nav-links" id="navLinks">
           <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"<?php if ( is_front_page() ) echo ' class="active"'; ?>><?php esc_html_e( 'Home', 'baysolar' ); ?></a></li>
-          <?php if ( is_front_page() ) : ?>
-          <li><a href="#about"><?php esc_html_e( 'About', 'baysolar' ); ?></a></li>
-          <li><a href="#services"><?php esc_html_e( 'Services', 'baysolar' ); ?></a></li>
-          <?php endif; ?>
+          <?php
+          $about_url    = is_front_page() ? '#about' : esc_url( home_url( '/#about' ) );
+          $services_url = is_front_page() ? '#services' : esc_url( home_url( '/#services' ) );
+          ?>
+          <li><a href="<?php echo $about_url; ?>"><?php esc_html_e( 'About', 'baysolar' ); ?></a></li>
+          <li><a href="<?php echo $services_url; ?>"><?php esc_html_e( 'Services', 'baysolar' ); ?></a></li>
+          <li><a href="<?php echo esc_url( get_permalink( get_page_by_path( 'gallery' ) ) ); ?>"<?php if ( is_page( 'gallery' ) ) echo ' class="active"'; ?>><?php esc_html_e( 'Gallery', 'baysolar' ); ?></a></li>
           <li><a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>"<?php if ( is_page( 'contact' ) ) echo ' class="active"'; ?>><?php esc_html_e( 'Contact', 'baysolar' ); ?></a></li>
           <li><a href="<?php echo esc_url( get_permalink( get_page_by_path( 'contact' ) ) ); ?>" class="btn btn-primary nav-cta"><?php esc_html_e( 'Get a Quote', 'baysolar' ); ?></a></li>
         </ul>
