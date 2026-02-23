@@ -1,13 +1,29 @@
-// ===== HEADER SCROLL EFFECT =====
+// ===== HEADER SCROLL EFFECT + SCROLL TO TOP (merged, passive) =====
 const header = document.getElementById('header');
+const scrollTopBtn = document.getElementById('scrollTop');
 
+let ticking = false;
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
+  if (!ticking) {
+    requestAnimationFrame(() => {
+      const y = window.scrollY;
+      if (header) {
+        header.classList.toggle('scrolled', y > 50);
+      }
+      if (scrollTopBtn) {
+        scrollTopBtn.classList.toggle('visible', y > 400);
+      }
+      ticking = false;
+    });
+    ticking = true;
   }
-});
+}, { passive: true });
+
+if (scrollTopBtn) {
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
 
 // ===== MOBILE MENU =====
 const hamburger = document.getElementById('hamburger');
@@ -36,23 +52,6 @@ if (hamburger && navLinks) {
   });
 }
 
-// ===== SCROLL TO TOP =====
-const scrollTopBtn = document.getElementById('scrollTop');
-
-if (scrollTopBtn) {
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) {
-      scrollTopBtn.classList.add('visible');
-    } else {
-      scrollTopBtn.classList.remove('visible');
-    }
-  });
-
-  scrollTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-}
-
 // ===== STATS COUNTER ANIMATION =====
 const statNumbers = document.querySelectorAll('.stat-number');
 
@@ -68,7 +67,6 @@ if (statNumbers.length > 0) {
         function updateCount(currentTime) {
           const elapsed = currentTime - startTime;
           const progress = Math.min(elapsed / duration, 1);
-          // Ease out
           const eased = 1 - Math.pow(1 - progress, 3);
           el.textContent = Math.round(target * eased);
 
@@ -90,7 +88,7 @@ if (statNumbers.length > 0) {
 
 // ===== FADE IN ANIMATIONS =====
 const fadeElements = document.querySelectorAll(
-  '.about-section, .service-card, .testimonial-card, .contact-form-wrapper, .contact-info-wrapper'
+  '.about-section, .service-card, .testimonial-card, .contact-form-wrapper, .contact-info-wrapper, .accreditation-card'
 );
 
 fadeElements.forEach(el => el.classList.add('fade-in'));
@@ -98,7 +96,6 @@ fadeElements.forEach(el => el.classList.add('fade-in'));
 const fadeObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      // Add small stagger delay for cards
       const siblings = entry.target.parentElement?.children;
       if (siblings) {
         const index = Array.from(siblings).indexOf(entry.target);

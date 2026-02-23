@@ -16,8 +16,8 @@
   <link rel="canonical" href="https://baysolar.co.uk/contact.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.min.css">
 </head>
 <body>
   <!-- Skip to content for accessibility -->
@@ -36,8 +36,8 @@
     <nav class="navbar">
       <div class="container nav-inner">
         <a href="index.html" class="nav-logo">
-          <img src="logo.png" alt="Bay Solar" class="logo-dark">
-          <img src="logo-white.png" alt="Bay Solar" class="logo-white">
+          <img src="logo.png" alt="Bay Solar" class="logo-dark" width="297" height="136">
+          <img src="logo-white.png" alt="Bay Solar" class="logo-white" width="297" height="136">
         </a>
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
           <span></span><span></span><span></span>
@@ -72,20 +72,20 @@
           <div class="form-row">
             <div class="form-group">
               <label for="firstName">First Name</label>
-              <input type="text" id="firstName" name="firstName" required>
+              <input type="text" id="firstName" name="firstName" autocomplete="given-name" required>
             </div>
             <div class="form-group">
               <label for="lastName">Last Name</label>
-              <input type="text" id="lastName" name="lastName" required>
+              <input type="text" id="lastName" name="lastName" autocomplete="family-name" required>
             </div>
           </div>
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" autocomplete="email" required>
           </div>
           <div class="form-group">
             <label for="phone">Phone (optional)</label>
-            <input type="tel" id="phone" name="phone">
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
           </div>
           <div class="form-group">
             <label for="message">Comment or Message</label>
@@ -127,7 +127,7 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-col">
-        <img src="logo-white.png" alt="Bay Solar" class="footer-logo">
+        <img src="logo-white.png" alt="Bay Solar" class="footer-logo" width="297" height="136">
         <p>Professional solar installations across Lancaster, Morecambe and surrounding areas. Over 20 years of experience. Fully MCS credited.</p>
       </div>
       <div class="footer-col">
@@ -169,6 +169,6 @@
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
   </button>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

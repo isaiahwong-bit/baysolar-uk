@@ -18,8 +18,8 @@
   <link rel="canonical" href="https://baysolar.co.uk">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.min.css">
 
   <!-- Schema.org LocalBusiness structured data -->
   <script type="application/ld+json">
@@ -49,6 +49,11 @@
   </script>
 </head>
 <body>
+  <!-- SVG sprite for reusable icons -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="icon-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+  </svg>
+
   <!-- Skip to content for accessibility -->
   <a href="#about" class="skip-link">Skip to main content</a>
 
@@ -57,8 +62,8 @@
     <nav class="navbar">
       <div class="container nav-inner">
         <a href="index.html" class="nav-logo">
-          <img src="logo.png" alt="Bay Solar" class="logo-dark">
-          <img src="logo-white.png" alt="Bay Solar" class="logo-white">
+          <img src="logo.png" alt="Bay Solar" class="logo-dark" width="297" height="136">
+          <img src="logo-white.png" alt="Bay Solar" class="logo-white" width="297" height="136">
         </a>
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
           <span></span><span></span><span></span>
@@ -78,7 +83,7 @@
   <!-- Hero Section - Full Bleed Immersive -->
   <section class="hero">
     <div class="hero-bg">
-      <img src="images/hero-main.jpg" alt="Modern home with solar" class="hero-bg-img">
+      <img src="images/hero-main.jpg" alt="Modern home with solar" class="hero-bg-img" width="1920" height="1280" fetchpriority="high">
       <div class="hero-overlay"></div>
     </div>
     <div class="container hero-content">
@@ -92,9 +97,9 @@
         <div class="hero-trust">
           <span class="hero-trust-label">Certified & Trusted</span>
           <div class="hero-trust-logos">
-            <img src="images/mcs-certified.jpg" alt="MCS Certified">
-            <img src="images/recc-approved.jpg" alt="RECC Approved">
-            <img src="images/yesss-electrical.jpg" alt="YESSS Electrical Partner">
+            <img src="images/mcs-certified.jpg" alt="MCS Certified" width="501" height="501">
+            <img src="images/recc-approved.jpg" alt="RECC Approved" width="302" height="173">
+            <img src="images/yesss-electrical.jpg" alt="YESSS Electrical Partner" width="376" height="134">
           </div>
         </div>
         <div class="hero-cta">
@@ -132,7 +137,7 @@
   <section class="about-section" id="about">
     <div class="container about-grid">
       <div class="about-image">
-        <img src="images/about-new.jpg" alt="Bay Solar team at work" loading="lazy">
+        <img src="images/about-new.jpg" alt="Bay Solar team at work" width="1536" height="2048" loading="lazy">
       </div>
       <div class="about-text">
         <h4 class="section-subtitle">Who Are We?</h4>
@@ -154,7 +159,7 @@
       <div class="services-grid">
         <div class="service-card">
           <div class="service-image">
-            <img src="images/domestic-new.jpg" alt="Domestic Solar Installation" loading="lazy">
+            <img src="images/domestic-new.jpg" alt="Domestic Solar Installation" width="1536" height="2048" loading="lazy">
           </div>
           <div class="service-content">
             <span class="service-tag">Residential</span>
@@ -165,7 +170,7 @@
         </div>
         <div class="service-card">
           <div class="service-image">
-            <img src="images/business-new.jpg" alt="Business Solar Installation" loading="lazy">
+            <img src="images/business-new.jpg" alt="Business Solar Installation" width="1200" height="900" loading="lazy">
           </div>
           <div class="service-content">
             <span class="service-tag">Commercial</span>
@@ -176,7 +181,7 @@
         </div>
         <div class="service-card">
           <div class="service-image">
-            <img src="images/enterprise-new.jpg" alt="Solar Panel Evaluation & Safety Checks" loading="lazy">
+            <img src="images/enterprise-new.jpg" alt="Solar Panel Evaluation & Safety Checks" width="1564" height="2048" loading="lazy">
           </div>
           <div class="service-content">
             <span class="service-tag">Maintenance</span>
@@ -199,15 +204,15 @@
       <div class="testimonials-grid">
         <div class="testimonial-card">
           <div class="testimonial-stars">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="18" height="18" fill="#f5a623"><use href="#icon-star"/></svg>
+            <svg width="18" height="18" fill="#f5a623"><use href="#icon-star"/></svg>
+            <svg width="18" height="18" fill="#f5a623"><use href="#icon-star"/></svg>
+            <svg width="18" height="18" fill="#f5a623"><use href="#icon-star"/></svg>
+            <svg width="18" height="18" fill="#f5a623"><use href="#icon-star"/></svg>
           </div>
           <p class="testimonial-text">"Excellent value for money, customer satisfaction, quality of components and workmanship. The team were always responsive to our inquiries and delivered beyond expectations."</p>
           <div class="testimonial-author">
-            <img src="images/testimonial.jpg" alt="Brian & Caroline Warren" loading="lazy">
+            <img src="images/testimonial.jpg" alt="Brian & Caroline Warren" width="160" height="160" loading="lazy">
             <div>
               <h4>Brian & Caroline Warren</h4>
               <span>Domestic Installation</span>
@@ -216,11 +221,11 @@
         </div>
         <div class="testimonial-card">
           <div class="testimonial-stars">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="18" height="18" fill="#f5a623"><use href="#icon-star"/></svg>
+            <svg width="18" height="18" fill="#f5a623"><use href="#icon-star"/></svg>
+            <svg width="18" height="18" fill="#f5a623"><use href="#icon-star"/></svg>
+            <svg width="18" height="18" fill="#f5a623"><use href="#icon-star"/></svg>
+            <svg width="18" height="18" fill="#f5a623"><use href="#icon-star"/></svg>
           </div>
           <p class="testimonial-text">"Fantastic service from start to finish. The team at Bay Solar made the entire process smooth and stress-free. Our energy bills have dropped significantly since installation."</p>
           <div class="testimonial-author">
@@ -232,11 +237,11 @@
         </div>
         <div class="testimonial-card">
           <div class="testimonial-stars">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="#f5a623"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <svg width="18" height="18" fill="#f5a623"><use href="#icon-star"/></svg>
+            <svg width="18" height="18" fill="#f5a623"><use href="#icon-star"/></svg>
+            <svg width="18" height="18" fill="#f5a623"><use href="#icon-star"/></svg>
+            <svg width="18" height="18" fill="#f5a623"><use href="#icon-star"/></svg>
+            <svg width="18" height="18" fill="#f5a623"><use href="#icon-star"/></svg>
           </div>
           <p class="testimonial-text">"Professional, efficient and great value. Bay Solar installed panels on our care home and the savings have been remarkable. Highly recommend their enterprise services."</p>
           <div class="testimonial-author">
@@ -261,21 +266,21 @@
       <div class="accreditation-grid">
         <div class="accreditation-card">
           <div class="accreditation-logo">
-            <img src="images/mcs-certified.jpg" alt="MCS Certified" loading="lazy">
+            <img src="images/mcs-certified.jpg" alt="MCS Certified" width="501" height="501" loading="lazy">
           </div>
           <h3>MCS Certified</h3>
           <p>Microgeneration Certification Scheme — the mark of quality for renewable energy installations in the UK.</p>
         </div>
         <div class="accreditation-card">
           <div class="accreditation-logo">
-            <img src="images/recc-approved.jpg" alt="RECC Approved" loading="lazy">
+            <img src="images/recc-approved.jpg" alt="RECC Approved" width="302" height="173" loading="lazy">
           </div>
           <h3>RECC Approved</h3>
           <p>Renewable Energy Consumer Code member — protecting consumers and ensuring the highest standards of practice.</p>
         </div>
         <div class="accreditation-card">
           <div class="accreditation-logo">
-            <img src="images/yesss-electrical.jpg" alt="YESSS Electrical Partner" loading="lazy">
+            <img src="images/yesss-electrical.jpg" alt="YESSS Electrical Partner" width="376" height="134" loading="lazy">
           </div>
           <h3>YESSS Electrical</h3>
           <p>Official partner — sourcing premium electrical components and equipment for every installation.</p>
@@ -301,7 +306,7 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-col">
-        <img src="logo-white.png" alt="Bay Solar" class="footer-logo">
+        <img src="logo-white.png" alt="Bay Solar" class="footer-logo" width="297" height="136">
         <p>Professional solar installations across Lancaster, Morecambe and surrounding areas. Over 20 years of experience. Fully MCS credited.</p>
       </div>
       <div class="footer-col">
@@ -342,6 +347,6 @@
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
   </button>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
