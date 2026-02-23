@@ -40,7 +40,7 @@ function baysolar_enqueue_assets() {
     // Google Fonts
     wp_enqueue_style(
         'baysolar-google-fonts',
-        'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Work+Sans:wght@300;400;500&display=swap',
+        'https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Work+Sans:wght@400;500&display=swap',
         array(),
         null
     );
@@ -202,3 +202,37 @@ function baysolar_body_classes( $classes ) {
     return $classes;
 }
 add_filter( 'body_class', 'baysolar_body_classes' );
+
+/**
+ * Open Graph meta tags
+ */
+function baysolar_open_graph() {
+    if ( is_front_page() ) {
+        $title       = 'Bay Solar Energy Solutions | Professional Solar Installations';
+        $description = 'MCS certified solar panel installations across Lancaster, Morecambe and Lancashire. Over 20 years of experience. Get a free quote today.';
+        $url         = home_url( '/' );
+        $image       = baysolar_image( 'hero-main.jpg' );
+    } elseif ( is_page( 'contact' ) ) {
+        $title       = 'Contact Bay Solar Energy Solutions - Get a Free Quote';
+        $description = 'Get in touch for a free solar installation consultation. MCS certified with over 20 years of experience.';
+        $url         = get_permalink();
+        $image       = '';
+    } elseif ( is_page( 'gallery' ) ) {
+        $title       = 'Gallery | Bay Solar Energy Solutions - Our Work';
+        $description = 'Browse our solar installation gallery. Domestic, commercial and enterprise projects across Lancashire.';
+        $url         = get_permalink();
+        $image       = '';
+    } else {
+        return;
+    }
+    ?>
+    <meta property="og:title" content="<?php echo esc_attr( $title ); ?>">
+    <meta property="og:description" content="<?php echo esc_attr( $description ); ?>">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?php echo esc_url( $url ); ?>">
+    <?php if ( $image ) : ?>
+    <meta property="og:image" content="<?php echo esc_url( $image ); ?>">
+    <?php endif; ?>
+    <?php
+}
+add_action( 'wp_head', 'baysolar_open_graph', 5 );

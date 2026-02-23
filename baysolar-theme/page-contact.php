@@ -27,20 +27,20 @@ get_header();
           <div class="form-row">
             <div class="form-group">
               <label for="firstName"><?php esc_html_e( 'First Name', 'baysolar' ); ?></label>
-              <input type="text" id="firstName" name="firstName" required>
+              <input type="text" id="firstName" name="firstName" autocomplete="given-name" required>
             </div>
             <div class="form-group">
               <label for="lastName"><?php esc_html_e( 'Last Name', 'baysolar' ); ?></label>
-              <input type="text" id="lastName" name="lastName" required>
+              <input type="text" id="lastName" name="lastName" autocomplete="family-name" required>
             </div>
           </div>
           <div class="form-group">
             <label for="email"><?php esc_html_e( 'Email', 'baysolar' ); ?></label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" autocomplete="email" required>
           </div>
           <div class="form-group">
             <label for="phone"><?php esc_html_e( 'Phone (optional)', 'baysolar' ); ?></label>
-            <input type="tel" id="phone" name="phone">
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
           </div>
           <div class="form-group">
             <label for="message"><?php esc_html_e( 'Comment or Message', 'baysolar' ); ?></label>

@@ -11,7 +11,7 @@ get_header();
   <!-- Hero Section - Full Bleed Immersive -->
   <section class="hero">
     <div class="hero-bg">
-      <img src="<?php echo baysolar_image( 'hero-main.jpg' ); ?>" alt="<?php esc_attr_e( 'Modern home with solar', 'baysolar' ); ?>" class="hero-bg-img">
+      <img src="<?php echo baysolar_image( 'hero-main.jpg' ); ?>" alt="<?php esc_attr_e( 'Modern home with solar', 'baysolar' ); ?>" class="hero-bg-img" width="1920" height="1280" fetchpriority="high">
       <div class="hero-overlay"></div>
     </div>
     <div class="container hero-content">
@@ -25,9 +25,9 @@ get_header();
         <div class="hero-trust">
           <span class="hero-trust-label"><?php esc_html_e( 'Certified & Trusted', 'baysolar' ); ?></span>
           <div class="hero-trust-logos">
-            <img src="<?php echo baysolar_image( 'mcs-certified.jpg' ); ?>" alt="<?php esc_attr_e( 'MCS Certified', 'baysolar' ); ?>">
-            <img src="<?php echo baysolar_image( 'recc-approved.jpg' ); ?>" alt="<?php esc_attr_e( 'RECC Approved', 'baysolar' ); ?>">
-            <img src="<?php echo baysolar_image( 'yesss-electrical.jpg' ); ?>" alt="<?php esc_attr_e( 'YESSS Electrical Partner', 'baysolar' ); ?>">
+            <img src="<?php echo baysolar_image( 'mcs-certified.jpg' ); ?>" alt="<?php esc_attr_e( 'MCS Certified', 'baysolar' ); ?>" width="501" height="501">
+            <img src="<?php echo baysolar_image( 'recc-approved.jpg' ); ?>" alt="<?php esc_attr_e( 'RECC Approved', 'baysolar' ); ?>" width="302" height="173">
+            <img src="<?php echo baysolar_image( 'yesss-electrical.jpg' ); ?>" alt="<?php esc_attr_e( 'YESSS Electrical Partner', 'baysolar' ); ?>" width="376" height="134">
           </div>
         </div>
         <div class="hero-cta">
@@ -65,7 +65,7 @@ get_header();
   <section class="about-section" id="about">
     <div class="container about-grid">
       <div class="about-image">
-        <img src="<?php echo baysolar_image( 'about-new.jpg' ); ?>" alt="<?php esc_attr_e( 'Bay Solar team at work', 'baysolar' ); ?>" loading="lazy">
+        <img src="<?php echo baysolar_image( 'about-new.jpg' ); ?>" alt="<?php esc_attr_e( 'Bay Solar team at work', 'baysolar' ); ?>" width="1536" height="2048" loading="lazy">
       </div>
       <div class="about-text">
         <h4 class="section-subtitle"><?php esc_html_e( 'Who Are We?', 'baysolar' ); ?></h4>
@@ -87,7 +87,7 @@ get_header();
       <div class="services-grid">
         <div class="service-card">
           <div class="service-image">
-            <img src="<?php echo baysolar_image( 'domestic-new.jpg' ); ?>" alt="<?php esc_attr_e( 'Domestic Solar Installation', 'baysolar' ); ?>" loading="lazy">
+            <img src="<?php echo baysolar_image( 'domestic-new.jpg' ); ?>" alt="<?php esc_attr_e( 'Domestic Solar Installation', 'baysolar' ); ?>" width="1536" height="2048" loading="lazy">
           </div>
           <div class="service-content">
             <span class="service-tag"><?php esc_html_e( 'Residential', 'baysolar' ); ?></span>
@@ -98,7 +98,7 @@ get_header();
         </div>
         <div class="service-card">
           <div class="service-image">
-            <img src="<?php echo baysolar_image( 'business-new.jpg' ); ?>" alt="<?php esc_attr_e( 'Business Solar Installation', 'baysolar' ); ?>" loading="lazy">
+            <img src="<?php echo baysolar_image( 'business-new.jpg' ); ?>" alt="<?php esc_attr_e( 'Business Solar Installation', 'baysolar' ); ?>" width="1200" height="900" loading="lazy">
           </div>
           <div class="service-content">
             <span class="service-tag"><?php esc_html_e( 'Commercial', 'baysolar' ); ?></span>
@@ -109,7 +109,7 @@ get_header();
         </div>
         <div class="service-card">
           <div class="service-image">
-            <img src="<?php echo baysolar_image( 'enterprise-new.jpg' ); ?>" alt="<?php esc_attr_e( 'Solar Panel Evaluation & Safety Checks', 'baysolar' ); ?>" loading="lazy">
+            <img src="<?php echo baysolar_image( 'enterprise-new.jpg' ); ?>" alt="<?php esc_attr_e( 'Solar Panel Evaluation & Safety Checks', 'baysolar' ); ?>" width="1564" height="2048" loading="lazy">
           </div>
           <div class="service-content">
             <span class="service-tag"><?php esc_html_e( 'Maintenance', 'baysolar' ); ?></span>
@@ -163,7 +163,7 @@ get_header();
           <p class="testimonial-text">&ldquo;<?php echo esc_html( $testimonial['text'] ); ?>&rdquo;</p>
           <div class="testimonial-author">
             <?php if ( ! empty( $testimonial['image'] ) ) : ?>
-            <img src="<?php echo baysolar_image( $testimonial['image'] ); ?>" alt="<?php echo esc_attr( $testimonial['name'] ); ?>" loading="lazy">
+            <img src="<?php echo baysolar_image( $testimonial['image'] ); ?>" alt="<?php echo esc_attr( $testimonial['name'] ); ?>" width="160" height="160" loading="lazy">
             <?php endif; ?>
             <div>
               <h4><?php echo esc_html( $testimonial['name'] ); ?></h4>
@@ -187,21 +187,21 @@ get_header();
       <div class="accreditation-grid">
         <div class="accreditation-card">
           <div class="accreditation-logo">
-            <img src="<?php echo baysolar_image( 'mcs-certified.jpg' ); ?>" alt="<?php esc_attr_e( 'MCS Certified', 'baysolar' ); ?>" loading="lazy">
+            <img src="<?php echo baysolar_image( 'mcs-certified.jpg' ); ?>" alt="<?php esc_attr_e( 'MCS Certified', 'baysolar' ); ?>" width="501" height="501" loading="lazy">
           </div>
           <h3><?php esc_html_e( 'MCS Certified', 'baysolar' ); ?></h3>
           <p><?php esc_html_e( 'Microgeneration Certification Scheme — the mark of quality for renewable energy installations in the UK.', 'baysolar' ); ?></p>
         </div>
         <div class="accreditation-card">
           <div class="accreditation-logo">
-            <img src="<?php echo baysolar_image( 'recc-approved.jpg' ); ?>" alt="<?php esc_attr_e( 'RECC Approved', 'baysolar' ); ?>" loading="lazy">
+            <img src="<?php echo baysolar_image( 'recc-approved.jpg' ); ?>" alt="<?php esc_attr_e( 'RECC Approved', 'baysolar' ); ?>" width="302" height="173" loading="lazy">
           </div>
           <h3><?php esc_html_e( 'RECC Approved', 'baysolar' ); ?></h3>
           <p><?php esc_html_e( 'Renewable Energy Consumer Code member — protecting consumers and ensuring the highest standards of practice.', 'baysolar' ); ?></p>
         </div>
         <div class="accreditation-card">
           <div class="accreditation-logo">
-            <img src="<?php echo baysolar_image( 'yesss-electrical.jpg' ); ?>" alt="<?php esc_attr_e( 'YESSS Electrical Partner', 'baysolar' ); ?>" loading="lazy">
+            <img src="<?php echo baysolar_image( 'yesss-electrical.jpg' ); ?>" alt="<?php esc_attr_e( 'YESSS Electrical Partner', 'baysolar' ); ?>" width="376" height="134" loading="lazy">
           </div>
           <h3><?php esc_html_e( 'YESSS Electrical', 'baysolar' ); ?></h3>
           <p><?php esc_html_e( 'Official partner — sourcing premium electrical components and equipment for every installation.', 'baysolar' ); ?></p>

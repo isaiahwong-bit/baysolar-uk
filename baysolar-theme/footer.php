@@ -4,7 +4,7 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-col">
-        <img src="<?php echo baysolar_image( 'logo-white.png' ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="footer-logo">
+        <img src="<?php echo baysolar_image( 'logo-white.png' ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="footer-logo" width="297" height="136">
         <p><?php esc_html_e( 'Professional solar installations across Lancaster, Morecambe and surrounding areas. Over 20 years of experience. Fully MCS credited.', 'baysolar' ); ?></p>
       </div>
       <div class="footer-col">

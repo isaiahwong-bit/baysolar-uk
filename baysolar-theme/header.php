@@ -27,8 +27,8 @@
     <nav class="navbar">
       <div class="container nav-inner">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="nav-logo">
-          <img src="<?php echo baysolar_image( 'logo.png' ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="logo-dark">
-          <img src="<?php echo baysolar_image( 'logo-white.png' ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="logo-white">
+          <img src="<?php echo baysolar_image( 'logo.png' ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="logo-dark" width="297" height="136">
+          <img src="<?php echo baysolar_image( 'logo-white.png' ); ?>" alt="<?php bloginfo( 'name' ); ?>" class="logo-white" width="297" height="136">
         </a>
         <button class="hamburger" id="hamburger" aria-label="<?php esc_attr_e( 'Toggle menu', 'baysolar' ); ?>">
           <span></span><span></span><span></span>
